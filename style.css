@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #ffffff; 
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.storage {
+    background-color: hsl(228, 56%, 26%);
+    align-self: center;
+}
+
+.box-1 {
+    padding: 2rem;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.box-1 .logo-img {
+    width: 7em;
+}
+
+.box-1 .icons {
+    display: flex;
+    margin-top: 2rem;
+}
+
+
+.box-1 .icon {
+    background-color: hsl(229, 57%, 11%);
+    padding: .75rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+
+.box-1 .icon img {
+    height: 1em;
+    align-self: center;
+}
+
+
+
+.box-2 {
+    position: relative;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.box-2::before {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    right: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: #fff;
+    clip-path: polygon(100% 0, 37% 0, 100% 100%);
+}
+
+.balloon {
+    position: absolute;
+    width: 130px;
+    height: 65px;
+    top: -40px;
+    right: 30px;
+    border-radius: 13px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.balloon-number {
+    color: #000;
+    font-size: 2em;
+    font-weight: bold;
+    align-self: center;
+}
+.balloon-p {
+    color: gray;
+    font-size: 1em;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.box-2 h1 {
+    text-align: start;
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.box-2 span {
+    font-weight: bold;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+    padding: 1.2px;
+    border-radius: 40px;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.barra-dentro {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    border-radius: 40px;
+    align-self: center;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.barra-redonda {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.gb {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 900px) {
+    body {
+        background-image: url(./images/bg-mobile.png);
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-1 {
+        margin-right: 0;
+        width: 45%;
+    }
+    .box-2{
+        position: relative;
+    }
+
+    .box-2::before {
+        display: none;
+    }
+    .balloon {
+        position: absolute;
+        top: 120px;
+        right: 150px;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .balloon {
+        position: absolute;
+        top: 150px;
+        right: 50px;
+    }
+}
